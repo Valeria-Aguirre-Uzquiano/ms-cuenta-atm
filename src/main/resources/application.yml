@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ms-cuenta-atm
+  datasource:
+#    platform: postgres
+    url: jdbc:postgresql://localhost:5432/atm
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+
+server:
+  port: 8080
