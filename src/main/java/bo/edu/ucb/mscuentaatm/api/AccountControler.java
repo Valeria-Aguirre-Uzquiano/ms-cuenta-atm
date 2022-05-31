@@ -2,6 +2,7 @@ package bo.edu.ucb.mscuentaatm.api;
 
 import java.util.List;
 
+import bo.edu.ucb.mscuentaatm.entity.TypeId;
 import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,9 +27,9 @@ public class AccountControler {
     }
 
     @RequestMapping(value = "/accounts", method = RequestMethod.GET)
-    public ResponseEntity<List<Card>> getAccounts(){
+    public ResponseEntity<List<TypeId>> getAccounts(){
         LOGGER.info("invocando metodo GET cuentas");
-        List<Card> accountsList =  accountRepository.findAll();
+        List<TypeId> accountsList =  accountRepository.obtenerType();
         return new ResponseEntity<>(accountsList, HttpStatus.OK);
     }
     

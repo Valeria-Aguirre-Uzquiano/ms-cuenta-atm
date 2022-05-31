@@ -108,7 +108,7 @@ public class Card implements Serializable {
             " cardId='" + getCardId() + "'" +
             //", clienteList='" + getClienteList() + "'" +
             //", registrosList='" + getRegistrosList() + "'" +
-            ", typeId='" + getTypeId() + "'" +
+           // ", typeId='" + getTypeId() + "'" +
             "}";
     }
     

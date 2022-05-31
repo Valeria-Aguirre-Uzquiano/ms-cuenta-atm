@@ -1,2 +1,5 @@
 ###
 GET http://localhost:8080/v1/api-account/accounts
+
+###gateway
+GET http://localhost:8282/mscuentaatm/v1/api-account/accounts

@@ -1,11 +1,10 @@
 spring:
   application:
-    name: ms-cuenta-atm
+    name: msCuentaAtm
   datasource:
-#    platform: postgres
-    url: jdbc:postgresql://localhost:5432/atm
+    url: jdbc:postgresql://localhost:5432/banco
     username: postgres
-    password: postgres
+    password: n
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,3 +16,13 @@ spring:
 
 server:
   port: 8080
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 1
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

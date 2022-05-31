@@ -36,18 +36,17 @@ CREATE TABLE Consulta_saldo (
 
 -- Table: Credito
 CREATE TABLE Credito (
-	 credito_id SERIAL NOT NULL,
-	 garante varchar(100) NULL,
-	 ingreso int NULL,
-	 cantidadT int NOT NULL,
-	 cantidadF int NULL,
-	 cuotas int NOT NULL,
-	 cuotasR int NULL,
-	 cutpasP int NULL,
-	 fechaC date NULL,
-	 inmueble varchar(100) NULL,
-	 client_id int NOT NULL,
-	 CONSTRAINT Credito_pk PRIMARY KEY (credito_id)
+                         credito_id SERIAL primary key,
+                         garante varchar(100) NULL,
+                         ingreso int NULL,
+                         cantidadT decimal NOT NULL,
+                         cantidadF decimal NULL,
+                         cuotas int NOT NULL,
+                         cuotasR int NULL,
+                         cuotasP int NULL,
+                         fechaC date,
+                         inmueble varchar(100) NULL,
+                         client_id int NOT NULL
 );
 
 -- Table: Deposito
