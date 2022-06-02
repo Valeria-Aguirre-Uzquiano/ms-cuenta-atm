@@ -1,5 +1,25 @@
 ###
 GET http://localhost:8080/v1/api-account/accounts
 
+###
+POST http://localhost:8080/v1/api-account/new_account
+Accept: application/json
+Content-type: application/json
+
+{
+    "cardId": 14,
+    "typeId": 2
+}
+
+###
+PUT http://localhost:8080/v1/api-account/account
+Accept: application/json
+Content-type: application/json
+
+{
+    "cardId": 14,
+    "typeId": 1
+}
+
 ###gateway
 GET http://localhost:8282/mscuentaatm/v1/api-account/accounts
