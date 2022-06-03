@@ -1,6 +1,9 @@
 ###
 GET http://localhost:8080/v1/api-account/accounts
 
+###gateway
+GET http://localhost:8282/mscuentaatm/v1/api-account/accounts
+
 ###
 POST http://localhost:8080/v1/api-account/new_account
 Accept: application/json
@@ -10,6 +13,17 @@ Content-type: application/json
     "cardId": 14,
     "typeId": 2
 }
+
+###gateway
+POST http://localhost:8282/mscuentaatm/v1/api-account/new_account
+Accept: application/json
+Content-type: application/json
+
+{
+  "cardId": 14,
+  "typeId": 2
+}
+
 
 ###
 PUT http://localhost:8080/v1/api-account/account
@@ -22,4 +36,11 @@ Content-type: application/json
 }
 
 ###gateway
-GET http://localhost:8282/mscuentaatm/v1/api-account/accounts
+PUT http://localhost:8282/mscuentaatm/v1/api-account/account
+Accept: application/json
+Content-type: application/json
+
+{
+  "cardId": 14,
+  "typeId": 1
+}

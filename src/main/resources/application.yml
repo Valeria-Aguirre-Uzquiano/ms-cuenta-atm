@@ -2,9 +2,9 @@ spring:
   application:
     name: msCuentaAtm
   datasource:
-    url: jdbc:postgresql://localhost:5432/atm
+    url: jdbc:postgresql://localhost:5432/banco
     username: postgres
-    password: postgres
+    password: n
   jpa:
     hibernate:
       ddl-auto: update
