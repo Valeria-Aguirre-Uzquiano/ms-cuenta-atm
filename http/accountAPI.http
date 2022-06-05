@@ -1,11 +1,11 @@
 ###
-GET http://localhost:9010/v1/api-account/accounts
+GET http://localhost:8080/v1/api-account/accounts?cardId=1
 
 ###gateway
 GET http://localhost:8282/ms-cuenta-atm/v1/api-account/accounts
 
 ###
-POST http://localhost:8080/v1/api-account/new_account
+POST http://localhost:9010/v1/api-account/new_account
 Accept: application/json
 Content-type: application/json
 

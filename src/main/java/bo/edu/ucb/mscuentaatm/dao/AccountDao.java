@@ -22,16 +22,17 @@ public class AccountDao {
         this.dataSource = dataSource;
     }
 
-    public List<Card> ListAccount(){
+    public List<Card> ListAccount(Integer cardId){
         List<Card> result = new ArrayList<>();
         String sql = "SELECT c.card_id, t.type_card " +
                     "FROM card c "+
-                    "inner join type_Card t on (c.type_id = t.type_id);";
+                    "inner join type_Card t on (c.type_id = t.type_id) WHERE c.card_id = ?";
         try (
                 Connection conn = dataSource.getConnection();
                 PreparedStatement param = conn.prepareStatement(sql);
         )
         {            
+            param.setInt(1, cardId);
             ResultSet rs = param.executeQuery();
             while (rs.next()){
                 Card card = new Card();
