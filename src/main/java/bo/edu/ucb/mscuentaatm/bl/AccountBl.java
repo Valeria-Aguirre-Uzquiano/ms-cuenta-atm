@@ -18,8 +18,8 @@ public class AccountBl {
         this.accountDao = accountDao;
     }
 
-    public List<Card> ListAccount(){
-        return accountDao.ListAccount();
+    public List<Card> ListAccount(Integer cardId){
+        return accountDao.ListAccount(cardId);
     }
 
     public HttpStatus createAccount(Card card){

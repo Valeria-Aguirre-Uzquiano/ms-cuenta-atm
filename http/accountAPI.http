@@ -1,8 +1,8 @@
 ###
-GET http://localhost:9010/v1/api-account/accounts
+GET http://localhost:8080/v1/api-account/accounts?cardId=1
 
 ###
-POST http://localhost:8080/v1/api-account/new_account
+POST http://localhost:9010/v1/api-account/new_account
 Accept: application/json
 Content-type: application/json
 

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import bo.edu.ucb.mscuentaatm.bl.AccountBl;
@@ -31,9 +32,9 @@ public class AccountControler {
 
 
     @RequestMapping(value = "/accounts", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Card> getAccounts(){
+    public List<Card> getAccount(@RequestParam Integer cardId){
         LOGGER.info("invocando metodo GET cuentas");
-        List<Card> accountsList = accountBl.ListAccount();
+        List<Card> accountsList = accountBl.ListAccount(cardId);
         return accountsList;
     }
 
